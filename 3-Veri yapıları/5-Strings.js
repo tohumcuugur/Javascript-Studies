@@ -38,6 +38,7 @@ val = (firstName + lastName).toLowerCase();
 console.log(val);
 console.log(typeof val);
 
+// indexOf bir string içerisinde arama yaparken kullanıyoruz.
 
 val = (firstName + lastName).indexOf('o'); // 5 çıktısı alırız. UgurTohumcu o harfi 5.harften sonra geliyor.
 
