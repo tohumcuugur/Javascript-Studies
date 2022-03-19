@@ -11,7 +11,7 @@ person = {
         country: 'Turkey',
     },
     getBirthYear : function(){
-        return 2018-this.age //Hangi nesne içinde this kullanırsak o nesnenin referansını almış oluruz yani burada person'u işaretlemiş olduk.
+        return 2018-this.age //Hangi nesne içinde "this" kullanırsak o nesnenin referansını almış oluruz yani burada person'u işaretlemiş olduk.
     }
 }
 console.log(person);
