@@ -19,7 +19,7 @@ function total(hesap,ek_hesap){
             }
         }
         else{
-            console.log(`Hesabınızda ${total_money}tl var.Uygun bir mebla girin`)
+            console.log(`Hesabınız + ek hesabınızda ${total_money}tl var.Uygun bir mebla girin`)
         }
     }
 }
