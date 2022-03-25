@@ -1,3 +1,28 @@
+//window object
+
+let val;
+var a = 10;
+
+function abc() {
+    return 0;
+}
+
+//alert
+//alert('Merhaba');
+
+//prompt
+
+var b = prompt('Bir sayı giriniz');
+console.log(b);
+//confirm
+
+var con = confirm('Emin misiniz.');
+console.log(con);
+if (con) {
+    console.log('ok');
+} else {
+    console.log('no');
+}
 
 
 
