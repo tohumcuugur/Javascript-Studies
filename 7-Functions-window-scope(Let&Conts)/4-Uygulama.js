@@ -35,7 +35,7 @@ function paraCek(hesap,miktar){ //obje bilgisinin değerlerini fonksiyon içinde
                 var bakiye = hesap.bakiye;
                 var ekhesap = miktar-bakiye;
                 hesap.bakiye = 0;
-                hesap.ekhesap = hesap.ekhesap-ekhesap
+                hesap.ek_bakiye = hesap.ek_bakiye-ekhesap
             }
             else{
                 console.log(`${hesap.hesapNo} no'lu hesabınızda ${miktar} tl bulunmamaktadır.`)
@@ -50,3 +50,4 @@ function paraCek(hesap,miktar){ //obje bilgisinin değerlerini fonksiyon içinde
 
 paraCek(hesapA,para);
 paraCek(hesapA,para);
+

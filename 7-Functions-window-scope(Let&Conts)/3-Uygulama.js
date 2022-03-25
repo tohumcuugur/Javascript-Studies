@@ -24,3 +24,4 @@ function total(hesap,ek_hesap){
     }
 }
 total(hesap,ek_hesap);
+
