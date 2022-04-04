@@ -1,0 +1,1 @@
+Bu bölümde javascript çalışmalarım ve projelerim bulunmaktadır.Notlar düzenli ve temizdir.Gerek gördüğüm yerlerde açıklama satırı yazmaya dikkat ederim.
