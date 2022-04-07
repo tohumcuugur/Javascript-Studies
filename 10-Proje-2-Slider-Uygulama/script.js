@@ -61,7 +61,7 @@ function init(settings) {
             do {
                 index = Math.floor(Math.random() * slaytCount) // When we multiply the random number( 0-0.9) by the number of slides(5), it generates up to 5 numbers. We round it to 4 with math floor because index should be maximum 4.
             }
-            while (index == prev)
+            while (index == prev)//Eşitken sayı üretir değilken üretmez. ilk sayımızı aldık misal 3 ve prev değeri olmadığından yani 3 == prev olmadığından döngüye tekrar girmez. Do döngüsü index == prev olduğu sürece çalışır. Daha sonra 3 == prev oldu. setInterval'da süre sürekli işliyor döngüye tekrar girdik. İndex aldık misal 4 == 3 olmadığı için yeni sayı üretmedi döngü yine sona erdi. Daha sonra yine bir sayı aldı ve 4 == 4 olduğundan do kısmından yeniden sayı aldık.Bu şekilde devam eder.
             prev = index; //in the first tour for an example index is 3 
         } else {
             //artan index
