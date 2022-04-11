@@ -40,7 +40,10 @@ val = document.getElementsByClassName('list-group-item');
 //     item.textContent = `${index} - hello`
 // });
 
+
 val = document.querySelectorAll('li:nth-child(odd)'); //Reaching of odd-numbered elements of the array
+
+// ******************************************İMPORTANT************************************************
 
 val.forEach(function(item){
     item.style.background = '#ccc'   //with getElementByİd or Tag or Class , we cant use forEach method.Because when we use getelement we get "HTMLCOLLECTİON". but with querySelectors we get "NodeList"
