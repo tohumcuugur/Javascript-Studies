@@ -28,7 +28,7 @@ function calculateTotal() {
     selectedSeats.forEach(function (seat) {
         selectedSeatsArr.push(seat); //***************İMPORTANT**************** In moder java script we can do it with SPREAD method.
     });
-    seats.forEach(function (seat) {
+    seats.forEach(function (seat) { //ANLAMADIM. NASIL OLUYORDA selectedSeats'i fonksiyon içinde tanımlamadan çalışmıyorda.seats'i fonksiyon içinde tanımlamadan çalışıyor.
         seatsArr.push(seat)
     });
 
