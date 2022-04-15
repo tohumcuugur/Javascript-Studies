@@ -7,7 +7,7 @@ const phoneNumber = document.getElementById('phone')
 //When user enters information it goes into input's value = "".
 //The purpose of the form is to pass the information to the action = "" parameter and send it to the server side.We are not writing server based code so we dont need action ="" in html code.
 function error(input, message) {
-    input.className = 'form-control is-invalid' //is-invalid is a bootsrap class.İf input is left blank it makes border red and create (!) sembol for warning.
+    input.className = 'form-control is-invalid' //is-invalid is a bootsrap class.it makes border red and create (!) sembol for warning.
     const div = input.nextElementSibling;
     div.innerText = message;
     div.className = 'invalid-feedback'
