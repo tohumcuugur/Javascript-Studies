@@ -40,18 +40,19 @@ keys.addEventListener('click', function (e) {
     inputNumber(element.value);
     update();
 });
-function handleOperator(nextOperator){
+
+function handleOperator(nextOperator) {
     const value = parseFloat(displayValue)
 
-    if(operator && waitingForSecondValue){
+    if (operator && waitingForSecondValue) {
         operator = nextOperator;
         return;
     }
 
-    if(firstValue==null){
+    if (firstValue == null) {
         firstValue = value;
-    }else if(operator){
-        const result = calculate(firstValue,value,operator);
+    } else if (operator) {
+        const result = calculate(firstValue, value, operator);
 
         displayValue = `${parseFloat(result.toFixed(7))}`
         firstValue = result;
@@ -59,32 +60,33 @@ function handleOperator(nextOperator){
     waitingForSecondValue = true;
     operator = nextOperator;
 }
-function calculate(first,second,operator){
-    if(operator === '+'){
-        return first + second ;
-    }else if(operator === '-'){
-        return first - second ;
 
-    }else if(operator === '*'){
-        return first * second ;
-        
-    }else if(operator === '/'){
-        return first / second ; 
+function calculate(first, second, operator) {
+    if (operator === '+') {
+        return first + second;
+    } else if (operator === '-') {
+        return first - second;
+
+    } else if (operator === '*') {
+        return first * second;
+
+    } else if (operator === '/') {
+        return first / second;
     }
     return second;
 }
 
 function inputNumber(number) {
-    if(waitingForSecondValue){
+    if (waitingForSecondValue) {
         displayValue = number;
-        waitingForSecondValue = false;}
-        else{
+        waitingForSecondValue = false;
+    } else {
         displayValue = displayValue === '0' ? number : displayValue + number;
     }
 }
 
 function inputDecimal() {
-    if (!displayValue.includes('.')) {
+    if (!displayValue.includes('.')) { //************** ÖNEMLİ */ includes dizilerde arama yapmak için kullanılır. Contains ise class element gibi durumlarda kullanılır.
         displayValue += '.';
     }
 }
