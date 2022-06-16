@@ -1,5 +1,6 @@
 //prototype
 let person = function(name,yearOfBirth,job){
+    var person = this;
     this.name = name;
     this.yearOfBirth = yearOfBirth;
     this.job = job;
