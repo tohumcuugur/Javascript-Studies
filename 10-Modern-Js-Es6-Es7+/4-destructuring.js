@@ -34,7 +34,7 @@ function urunGoster(marka, model ,fiyat= 0, satisDurumu = false){
 }
 urunGoster("apple,","iphone12"); // fiyat otomatik 0 olur satış değeride otomatik false atanır.
 
-
+/////////////////////alternatif///////////////////
 function urunGoster1(obj){
     let {marka, model, fiyat = 0, satisDurumu = false} = obj;
     console.log(marka, model , fiyat , satisDurumu);
