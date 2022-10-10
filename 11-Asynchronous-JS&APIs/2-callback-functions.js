@@ -1,25 +1,31 @@
-//login =>username
-//posts
-//create post
+// login =>username
+// posts
+// create post
 
 console.log("start");
-const login = (userName , password , callback) =>{
+const serverStatus = true;
+const login = (userName , password , successFn , errorFn) =>{
     setTimeout(() =>{ // örnek olarak settime out kullanıyoruz.Gerçek uygulamada database yada kullanmış olduğumuz servisin işlemi gerçekleştirebileceği süreye göre değişecek.
-        callback({userName: userName , email: "info@ugurtohumcu@hotmail.com"})
+        if (serverStatus){
+            successFn({userName: userName ,password, email: "info@ugurtohumcu@hotmail.com"})
+        }else{
+            errorFn("server kapalı")
+        }
     },1000);
 }
-const getPostsByUserName = (userName,callback) =>{
+const getPostsByUserName = (userName,successFn) =>{
     setTimeout(() =>{
-        callback(["post 1" , "post 2" , "post 3"]);
+        successFn(["post 1" , "post 2" , "post 3"]);
     },2000);
 }
-const getPostDetails = (post,callback) =>{
+const getPostDetails = (post,successFn) =>{
     setTimeout(() =>{
-        callback("post details");
+        successFn("post details");
     },3000);
 }
-login("uğur tohumcu" , "123456" , user => { // callback dediğimiz işlem için tanımladığımız ek user parametresi login içindeki bilgiyi callback'a gönderir ve ordanda 2 saniye sonra çıktı alırız.
+login("uğur tohumcu" , "123456" , user => { // successFn dediğimiz işlem için tanımladığımız ek user parametresi login içindeki bilgiyi successFn'a gönderir ve ordanda 2 saniye sonra çıktı alırız.
     console.log(user.userName);
+    console.log(user.password);
     console.log(user.email);
 
     getPostsByUserName(user.userName , (posts) =>{
@@ -27,8 +33,12 @@ login("uğur tohumcu" , "123456" , user => { // callback dediğimiz işlem için
 
         getPostDetails(posts[0], (details) =>{
             console.log(details);
-        }); //callbacklerin sürekli artmasına ve iç içe karışıklık yaratmasına callback hell denir.Alternatif yöntem olan promise ve asyc-await yöntemleri daha sık kullanılır.
+        }); //successFnlerin sürekli artmasına ve iç içe karışıklık yaratmasına successFn hell denir.Alternatif yöntem olan promise ve asyc-await yöntemleri daha sık kullanılır.
     });
-});
+},error);
 
+function error(msg){
+    console.log(msg);
+}
 console.log("finish");
+
